@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HMCategoryViewController">
+            <connections>
+                <outlet property="leftTableView" destination="jgf-fq-xvj" id="Ty4-K8-sqU"/>
+                <outlet property="rightTableView" destination="bCp-HC-Fpz" id="hP4-Um-LrT"/>
+                <outlet property="view" destination="iN0-l3-epB" id="l4W-rk-oeV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jgf-fq-xvj" userLabel="左边表格">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="85L-rk-phr"/>
+                        <outlet property="delegate" destination="-1" id="NAH-sY-LZ2"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bCp-HC-Fpz" userLabel="右边表格">
+                    <rect key="frame" x="300" y="0.0" width="300" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="IeL-lk-TRz"/>
+                        <outlet property="delegate" destination="-1" id="EoY-pi-p3v"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="bCp-HC-Fpz" secondAttribute="bottom" id="2YV-WR-zAR"/>
+                <constraint firstItem="bCp-HC-Fpz" firstAttribute="leading" secondItem="jgf-fq-xvj" secondAttribute="trailing" id="Iz1-fi-nDl"/>
+                <constraint firstAttribute="trailing" secondItem="bCp-HC-Fpz" secondAttribute="trailing" id="VCL-1t-s5R"/>
+                <constraint firstItem="jgf-fq-xvj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="X0w-fG-Fx7"/>
+                <constraint firstItem="bCp-HC-Fpz" firstAttribute="leading" secondItem="jgf-fq-xvj" secondAttribute="trailing" id="Ygs-mo-xRL"/>
+                <constraint firstItem="bCp-HC-Fpz" firstAttribute="width" secondItem="jgf-fq-xvj" secondAttribute="width" id="gV9-MZ-yqB"/>
+                <constraint firstAttribute="bottom" secondItem="jgf-fq-xvj" secondAttribute="bottom" id="i5D-sE-ojk"/>
+                <constraint firstItem="jgf-fq-xvj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mZZ-Sy-DHg"/>
+                <constraint firstItem="bCp-HC-Fpz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sy4-ve-1LG"/>
+            </constraints>
+            <point key="canvasLocation" x="356" y="365"/>
+        </view>
+    </objects>
+</document>

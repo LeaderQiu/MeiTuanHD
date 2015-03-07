@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HMCityViewController">
+            <connections>
+                <outlet property="cover" destination="taB-hu-Rlv" id="qsZ-SA-vGn"/>
+                <outlet property="searchBar" destination="LnG-81-97s" id="pWV-5B-Tyn"/>
+                <outlet property="tableView" destination="LyZ-kx-bR5" id="jVl-pN-MgH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="请输入城市名或者拼音" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="LnG-81-97s">
+                    <rect key="frame" x="15" y="15" width="570" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="04Q-J5-Q9X"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="W1l-GA-ASW"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LyZ-kx-bR5">
+                    <rect key="frame" x="0.0" y="69" width="600" height="531"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="FiP-3L-8xs"/>
+                        <outlet property="delegate" destination="-1" id="WBq-qs-97D"/>
+                    </connections>
+                </tableView>
+                <button hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taB-hu-Rlv" userLabel="遮盖">
+                    <rect key="frame" x="0.0" y="69" width="600" height="531"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LyZ-kx-bR5" secondAttribute="trailing" id="9xY-Jg-v90"/>
+                <constraint firstItem="LyZ-kx-bR5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="B5F-II-xgs"/>
+                <constraint firstItem="LnG-81-97s" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="Cj1-NT-o3E"/>
+                <constraint firstItem="LnG-81-97s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="D6X-Z0-jHs"/>
+                <constraint firstAttribute="trailing" secondItem="LnG-81-97s" secondAttribute="trailing" constant="15" id="EIK-QQ-6Pg"/>
+                <constraint firstItem="LyZ-kx-bR5" firstAttribute="top" secondItem="LnG-81-97s" secondAttribute="bottom" constant="10" id="Fnr-eh-v33"/>
+                <constraint firstAttribute="bottom" secondItem="LyZ-kx-bR5" secondAttribute="bottom" id="IPP-2W-XbH"/>
+                <constraint firstItem="taB-hu-Rlv" firstAttribute="top" secondItem="LnG-81-97s" secondAttribute="bottom" constant="10" id="SiL-bR-iXw"/>
+                <constraint firstAttribute="trailing" secondItem="taB-hu-Rlv" secondAttribute="trailing" id="U3g-Fg-Um7"/>
+                <constraint firstItem="taB-hu-Rlv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xzo-rs-jAg"/>
+                <constraint firstAttribute="bottom" secondItem="taB-hu-Rlv" secondAttribute="bottom" id="mou-Ky-8D2"/>
+            </constraints>
+            <point key="canvasLocation" x="356" y="356"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+    </resources>
+</document>

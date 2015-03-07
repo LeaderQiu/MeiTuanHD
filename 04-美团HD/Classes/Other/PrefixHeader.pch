@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  04-美团HD
+//
+//  Created by apple on 15/2/4.
+//  Copyright (c) 2015年 heima. All rights reserved.
+//
+
+#ifndef _4___HD_PrefixHeader_pch
+#define _4___HD_PrefixHeader_pch
+
+#ifdef DEBUG
+#define HMLog(...) NSLog(__VA_ARGS__)
+#else
+#define HMLog(...)
+#endif
+
+#define HMARGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define HMColor(r, g, b) HMARGBColor(r, g, b, 1.0)
+
+#define HMRandomColor HMColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define HMNoteCenter [NSNotificationCenter defaultCenter]
+
+#import "UIView+Extension.h"
+#import "HMConst.h"
+
+#endif
